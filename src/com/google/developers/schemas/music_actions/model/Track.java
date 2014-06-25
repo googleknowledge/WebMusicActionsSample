@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
@@ -21,7 +20,6 @@ import com.google.appengine.api.datastore.Key;
 import com.google.developers.schemas.impl.DurationImpl;
 import com.google.developers.schemas.impl.EntryPointImpl;
 import com.google.developers.schemas.impl.ListenActionImpl;
-import com.google.developers.schemas.impl.MusicAlbumImpl;
 import com.google.developers.schemas.impl.MusicRecordingImpl;
 
 @Entity
@@ -37,10 +35,6 @@ public class Track {
 	
 	private String albumId;
 	
-	//@ManyToOne(optional=false)
-	//private Artist artist;
-	
-	//@ManyToOne(optional=false)
 	@Transient
 	private Album album;
 
@@ -59,10 +53,6 @@ public class Track {
 	public String getFreebaseId() {
 		return freebaseId;
 	}
-
-	/*public Artist getArtist() {
-		return artist;
-	}*/
 
 	public Album getAlbum() {
 		return album;
@@ -83,10 +73,6 @@ public class Track {
 	public void setFreebaseId(String freebaseId) {
 		this.freebaseId = freebaseId;
 	}
-
-	/*public void setArtist(Artist artist) {
-		this.artist = artist;
-	}*/
 
 	public void setAlbum(Album album) {
 		this.album = album;
@@ -126,9 +112,6 @@ public class Track {
     	}
     	try {
     		track.setUrl(new URI("/track/" + id.getName()));
-    		/*if (getImage() != null) {
-    			album.setImage(new URI(getImage()));
-    		}*/
     		if (getFreebaseId() != null) {
     			track.addSameAs(new URI(getFreebaseId()));
     		}
@@ -143,10 +126,6 @@ public class Track {
     		track.setDuration(new DurationImpl(getDuration()));
     	}
     	if (showChildren && (getAlbum() != null)) {
-    		
-    		/*if (getAlbum().getArtist() != null) {
-    			album.setByArtist(getAlbum().getArtist().asSchemaOrg(false));
-    		}*/
     		MusicAlbum album = getAlbum().asSchemaOrg(false, true);
     		track.setInAlbum(album);
     	}

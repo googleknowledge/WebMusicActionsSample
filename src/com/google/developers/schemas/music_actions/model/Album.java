@@ -3,18 +3,13 @@ package com.google.developers.schemas.music_actions.model;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
@@ -22,16 +17,11 @@ import javax.persistence.Transient;
 import org.schema.EntryPoint;
 import org.schema.ListenAction;
 import org.schema.MusicAlbum;
-import org.schema.MusicGroup;
-import org.schema.MusicRecording;
-
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.Text;
-import com.google.developers.schemas.impl.DurationImpl;
 import com.google.developers.schemas.impl.EntryPointImpl;
 import com.google.developers.schemas.impl.ListenActionImpl;
 import com.google.developers.schemas.impl.MusicAlbumImpl;
-import com.google.developers.schemas.impl.MusicRecordingImpl;
 
 @Entity
 public class Album {
@@ -44,14 +34,11 @@ public class Album {
 	private String image;
 	private String freebaseId;
 	private Date releaseDate;
-	
 	private String artistId;
 	
-	//@ManyToOne(optional=false)
 	@Transient
 	private Artist artist;
 	
-	//@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@Transient
     private List<Track> tracks = new ArrayList<Track>();
 

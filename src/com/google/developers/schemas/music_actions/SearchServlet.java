@@ -3,18 +3,12 @@ package com.google.developers.schemas.music_actions;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.schema.MusicAlbum;
-import org.schema.MusicGroup;
 import org.schema.SearchAction;
 
-import com.google.developers.schemas.impl.MusicAlbumImpl;
-import com.google.developers.schemas.impl.MusicGroupImpl;
 import com.google.developers.schemas.impl.SearchActionImpl;
 import com.google.developers.schemas.jsonld.JsonLdSerializer;
 import com.google.developers.schemas.music_actions.doa.AlbumDao;
@@ -43,6 +37,7 @@ public class SearchServlet extends HttpServlet {
     	return searchAction;
     }
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
         	String query = request.getParameter("q");
@@ -67,8 +62,7 @@ public class SearchServlet extends HttpServlet {
 	    		request.setAttribute("query", query);
 	    		request.setAttribute("results", searchAction.getResults());
 	    		request.setAttribute("title", "Jarek & Shawn Music - Seach Results");
-	    		//request.setAttribute("applink", "android-app://com.example.android/http/jarekandshawnmusic.com/artists/" + artistId);
-	            request.getRequestDispatcher("/search.jsp").forward(request, response);
+	    		request.getRequestDispatcher("/search.jsp").forward(request, response);
         	}
         }
         catch (Throwable e1) {

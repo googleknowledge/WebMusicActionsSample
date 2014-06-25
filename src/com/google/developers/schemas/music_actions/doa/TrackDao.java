@@ -3,8 +3,6 @@ package com.google.developers.schemas.music_actions.doa;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -12,8 +10,6 @@ import javax.persistence.metamodel.EntityType;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import com.google.developers.schemas.music_actions.model.Album;
-import com.google.developers.schemas.music_actions.model.Artist;
 import com.google.developers.schemas.music_actions.model.Track;
 
 public class TrackDao {

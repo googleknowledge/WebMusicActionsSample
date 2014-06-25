@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.datastore.Text;
-import com.google.appengine.api.datastore.TransactionOptions;
 import com.google.developers.schemas.music_actions.doa.EMFService;
 import com.google.developers.schemas.music_actions.model.Album;
 import com.google.developers.schemas.music_actions.model.Artist;
@@ -88,8 +87,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track1 = new Track();
     	track1.setId(KeyFactory.createKey(Track.class.getSimpleName(), "1"));
-    	//track1.setAlbum(album);
-    	//track1.setArtist(artist);
     	track1.setName("Drifter");
     	track1.setDuration("4:31");
     	track1.setAlbumId("AllTheThings");
@@ -99,8 +96,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track2 = new Track();
     	track2.setId(KeyFactory.createKey(Track.class.getSimpleName(), "2"));
-    	//track2.setAlbum(album);
-    	//track2.setArtist(artist);
     	track2.setName("Back To Me");
     	track2.setDuration("3:30");
     	track2.setAlbumId("AllTheThings");
@@ -110,8 +105,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track3 = new Track();
     	track3.setId(KeyFactory.createKey(Track.class.getSimpleName(), "3"));
-    	//track3.setAlbum(album);
-    	//track3.setArtist(artist);
     	track3.setName("Fear & Chaos");
     	track3.setDuration("4:57");
     	track3.setAlbumId("AllTheThings");
@@ -121,8 +114,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track4 = new Track();
     	track4.setId(KeyFactory.createKey(Track.class.getSimpleName(), "4"));
-    	//track4.setAlbum(album);
-    	//track4.setArtist(artist);
     	track4.setName("Hear Them Talking");
     	track4.setDuration("4:55");
     	track4.setAlbumId("AllTheThings");
@@ -132,8 +123,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track5 = new Track();
     	track5.setId(KeyFactory.createKey(Track.class.getSimpleName(), "5"));
-    	//track5.setAlbum(album);
-    	//track5.setArtist(artist);
     	track5.setName("Staring at the Last Star");
     	track5.setDuration("5:08");
     	track5.setAlbumId("AllTheThings");
@@ -143,8 +132,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track6 = new Track();
     	track6.setId(KeyFactory.createKey(Track.class.getSimpleName(), "6"));
-    	//track6.setAlbum(album);
-    	//track6.setArtist(artist);
     	track6.setName("Running (ft. Remington Forbes, Blueprint)");
     	track6.setDuration("5:53");
     	track6.setAlbumId("AllTheThings");
@@ -154,8 +141,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track7 = new Track();
     	track7.setId(KeyFactory.createKey(Track.class.getSimpleName(), "7"));
-    	//track7.setAlbum(album);
-    	//track7.setArtist(artist);
     	track7.setName("Dangerous Ways");
     	track7.setDuration("5:34");
     	track7.setAlbumId("AllTheThings");
@@ -165,8 +150,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track8 = new Track();
     	track8.setId(KeyFactory.createKey(Track.class.getSimpleName(), "8"));
-    	//track8.setAlbum(album);
-    	//track8.setArtist(artist);
     	track8.setName("The One (ft. Tribe One)");
     	track8.setDuration("4:24");
     	track8.setAlbumId("AllTheThings");
@@ -176,8 +159,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track9 = new Track();
     	track9.setId(KeyFactory.createKey(Track.class.getSimpleName(), "9"));
-    	//track9.setAlbum(album);
-    	//track9.setArtist(artist);
     	track9.setName("Farewell");
     	track9.setDuration("4:13");
     	track9.setAlbumId("AllTheThings");
@@ -187,8 +168,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track10 = new Track();
     	track10.setId(KeyFactory.createKey(Track.class.getSimpleName(), "10"));
-    	//track10.setAlbum(album);
-    	//track10.setArtist(artist);
     	track10.setName("Go Figure (ft. More Or Les, Ghettosocks, Timbuktu)");
     	track10.setDuration("6:13");
     	track10.setAlbumId("AllTheThings");
@@ -198,8 +177,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track11 = new Track();
     	track11.setId(KeyFactory.createKey(Track.class.getSimpleName(), "11"));
-    	//track11.setAlbum(album);
-    	//track11.setArtist(artist);
     	track11.setName("No Time (ft. Dale Chase)");
     	track11.setDuration("4:19");
     	track11.setAlbumId("AllTheThings");
@@ -209,8 +186,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track12 = new Track();
     	track12.setId(KeyFactory.createKey(Track.class.getSimpleName(), "12"));
-    	//track12.setAlbum(album);
-    	//track12.setArtist(artist);
     	track12.setName("All The Things");
     	track12.setDuration("4:44");
     	track12.setAlbumId("AllTheThings");
@@ -220,8 +195,6 @@ public class TestDataServlet extends HttpServlet {
     	entityManager.getTransaction().begin();
     	Track track13 = new Track();
     	track13.setId(KeyFactory.createKey(Track.class.getSimpleName(), "13"));
-    	//track13.setAlbum(album);
-    	//track13.setArtist(artist);
     	track13.setName("Last Writes");
     	track13.setDuration("6:04");
     	track13.setAlbumId("AllTheThings");
