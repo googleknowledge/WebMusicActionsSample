@@ -1,0 +1,122 @@
+body {
+	background: #CCC;
+	background-size: 50%;
+	font-family: 'Helvetica Neue Light', HelveticaNeue-Light, Helvetica, sans-serif;
+	margin: 0;
+}
+
+h1 {
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 72px;
+	height: 80px;
+	line-height: 60px;
+	color: white;
+	font-weight: 100;
+	margin: 0;
+	padding: 0 0 0 90px;
+	font-size: 1.8em;
+}
+
+h2 {
+	color: black;
+	font-weight: 100;
+	margin: 0;
+	font-size: 1.8em;
+}
+
+header {
+	background: #C00;
+	height: 150px;
+	box-shadow: 1px 0 10px;
+}
+
+header .inner {
+	position: relative;
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 45px;
+}
+
+#search {
+	position: absolute;
+	bottom: 35px;
+	right: 0;
+	width: 200px;
+	border-radius: 15px;
+	border: 0;
+	font-size: 0.9em;
+	padding: 0.2em 1.0em;
+	background: #900;
+	color: white;
+}
+
+#search:focus{
+    outline: 0;
+}
+
+*::-webkit-input-placeholder {
+	color: rgb(204, 102, 102);
+}
+
+section {
+	width: 600px;
+	background: #FFF;
+	box-shadow: 0px 1px 8px rgba(0,0,0,0.4);
+	margin: -50px auto 0.5em auto;
+	padding: 0 0 1em 0;
+	border-radius: 2px;
+}
+
+section img {
+	border-radius: 2px 2px 0 0;
+}
+
+section .inner {
+	margin: 1em 2em;
+	border-radius: 2px;
+	font-size: 0.9em;
+	color: #666;
+}
+
+section .inner strong {
+	color: black;
+}
+
+footer {
+	width: 600px;
+	margin: 0 auto 100px auto;
+	font-size: 0.8em;
+	color: #666;
+	text-align: right;
+}
+
+audio {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.artist {
+	font-weight: normal;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+.runtime {
+	color: #CCC;
+	font-size: 0.7em;
+}
+
+a {
+	color: #C00;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+
+a:hover {
+	border-bottom: 1px solid #C00;
+}
+
+.search_results li {
+	margin: 1em 0;
+}
